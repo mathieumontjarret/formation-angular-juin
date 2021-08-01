@@ -1,4 +1,9 @@
 <header class="fixed-top">
+  <!-- Bouton pour ouvrir ou fermer la navigation -->
+
+  <span (click)="toggle()">
+    <ng-content select=".tr-btn"></ng-content>
+  </span>
 
   <!-- Open bar, tu peux projeter ici tout ce que tu veux -->
   <!-- Transclusion avec ng-content -->
@@ -6,7 +11,7 @@
   <ng-content select=".tr-header"></ng-content>
 
 </header>
-<main>
+<main [ngClass]="{'close-aside': !open}">
 
   <div class="shadow position-fixed">
 
