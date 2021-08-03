@@ -2,42 +2,48 @@
   <!-- Bouton pour ouvrir ou fermer la navigation -->
 
   <span (click)="toggle()">
-    <ng-content select=".tr-btn"></ng-content>
+    <ng-content *ngIf="!open" select=".tr-btn-close"></ng-content>
+    <ng-content *ngIf="open" select=".tr-btn-open"></ng-content>
+
+    <!-- Remplacer les deux ngIf par une structure ngIf else -->
+
+    <!-- <ng-content *ngIf="!open; else elseBlock" select=".tr-btn-close"></ng-content>
+    <ng-template #elseBlock>
+      <ng-content select=".tr-btn-open"></ng-content>
+    </ng-template> -->
+
+    <!-- Bravo poto, on va l'écrire en ngIf then else maintenant -->
+
+    <!-- <ng-container *ngIf="open; then thenBlock; else elseBlock"></ng-container>
+    <ng-template #thenBlock>
+      <ng-content select=".tr-btn-close"></ng-content>
+    </ng-template>
+    <ng-template #elseBlock>
+      <ng-content select=".tr-btn-open"></ng-content>
+    </ng-template> -->
   </span>
 
   <!-- Open bar, tu peux projeter ici tout ce que tu veux -->
   <!-- Transclusion avec ng-content -->
 
   <ng-content select=".tr-header"></ng-content>
-
 </header>
-<main [ngClass]="{'close-aside': open}">
-
-  <div class="shadow position-fixed">
-
-  </div>
+<main [ngClass]="{ 'close-aside': open }">
+  <div class="shadow position-fixed"></div>
 
   <aside>
     <div class="scroller">
-
       <ng-content select=".tr-nav"></ng-content>
-
     </div>
   </aside>
 
   <div class="page">
-
     <div class="contents">
-
       <ng-content select=".tr-content"></ng-content>
-
     </div>
 
     <footer>
-
       <ng-content select=".tr-footer"></ng-content>
-
     </footer>
-
   </div>
 </main>
