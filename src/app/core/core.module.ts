@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginModule } from '../login/login.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -18,6 +19,7 @@ import { LoginModule } from '../login/login.module';
   ],
   imports: [
     CommonModule,
+    RouterModule
   ],
   exports: [
     UiModule, TemplateModule, IconsModule, LoginModule, HeaderComponent, NavComponent, FooterComponent
