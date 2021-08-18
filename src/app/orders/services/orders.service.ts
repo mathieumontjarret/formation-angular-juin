@@ -12,7 +12,7 @@ export class OrdersService {
   private collection$!: Observable<Order[]>;
   private urlApi = environment.urlApi;
   constructor(private http: HttpClient ) {
-    console.log( 'service orders instancied');
+
     // this.collection = this.http.get<Order[]>(this.urlApi + '/orders');
     this.collection = this.http.get<Order[]>(`${this.urlApi}/orders`);
 
