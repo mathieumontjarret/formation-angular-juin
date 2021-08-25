@@ -41,7 +41,7 @@ export class PageListOrdersComponent implements OnInit, OnDestroy {
     const state = event.target.value;
     this.ordersService.changeState(item, state).subscribe((res) => {
       // gérer les codes erreur retournés pour l'API
-      item = res;
+      Object.assign(item, res);
     })
   }
 
