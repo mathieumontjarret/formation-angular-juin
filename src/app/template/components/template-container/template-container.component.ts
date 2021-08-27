@@ -9,6 +9,7 @@ export class TemplateContainerComponent implements OnInit {
   @Input() public title!: string;
   constructor() {
     // mock title
+    this.title = 'Ohhh le joli title';
    }
 
   ngOnInit(): void {
