@@ -4,7 +4,7 @@
       "tjmHt": 1200,
       "nbJours": 20,
       "tva": 20,
-      "state": "CONFIRMED",
+      "state": "OPTION",
       "typePresta": "formation",
       "client": "Capgemini2",
       "comment": "Merci Cap pour les 24k",
@@ -74,7 +74,7 @@
       "tjmHt": 1200,
       "nbJours": 10,
       "tva": 20,
-      "state": "OPTION",
+      "state": "CANCELED",
       "typePresta": "coaching",
       "client": "modis",
       "comment": "iueiugr",
@@ -96,9 +96,19 @@
       "tva": 20,
       "state": "OPTION",
       "typePresta": "coaching",
-      "client": "etstest",
+      "client": "atos2",
       "comment": null,
       "id": 10
+    },
+    {
+      "tjmHt": 1200,
+      "nbJours": 5,
+      "tva": 20,
+      "state": "CONFIRMED",
+      "typePresta": "coaching",
+      "client": "ibm",
+      "comment": "test",
+      "id": 11
     }
   ],
   "clients": [
