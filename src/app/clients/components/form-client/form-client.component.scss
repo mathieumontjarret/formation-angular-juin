@@ -1,0 +1,8 @@
+form{
+  .ng-valid.ng-touched{
+    border: 3px solid var(--app-success);
+  }
+  .ng-valid.ng-touched{
+    border: 3px solid var(--app-error);
+  }
+}
